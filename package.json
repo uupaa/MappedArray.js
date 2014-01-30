@@ -1,0 +1,28 @@
+{
+  "name":           "uupaa.mappedarray.js",
+  "version":        "0.8.0",
+  "description":    "Object(map) + Array container.",
+  "url":            "https://github.com/uupaa/MappedArray.js",
+  "keywords":       ["map", "array", "container", "util", "uupaa"],
+  "author":         "uupaa <uupaa.js@gmail.com>",
+  "repository": {
+    "type":         "git",
+    "url":          "https://github.com/uupaa/MappedArray.js.git"
+  },
+  "scripts": {
+    "start":        "node node_modules/uupaa.minify.js --keep --output ./lib/MappedArray.min.js ./lib/MappedArray.js",
+    "test":         "NODE_ENV=production NODE_PATH=lib node --harmony test/index.node.js; open test/index.html"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "uupaa.test.js":    "",
+    "uupaa.help.js":    "",
+    "uupaa.task.js":    "",
+    "uupaa.minify.js":  ""
+  },
+  "lib":            "./lib/",
+  "main":           "./index.js",
+  "license":        "MIT",
+  "contributors":   []
+}
