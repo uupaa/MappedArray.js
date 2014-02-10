@@ -2,10 +2,14 @@ new Test().add([
         testMappedArray,
     ]).run()
       .worker(function(err, test) {
-        if (!err && typeof testMappedArray_ !== "undefined") {
-            testMappedArray = testMappedArray_;
-            new Test(test).run().worker();
+        if (!err) {
+            var undo = Test.swap(MappedArray, MappedArray_);
+
+            new Test(test).run(function(err, test) {
+                undo = Test.undo(undo);
+            });
         }
+
     });
 
 function testMappedArray(next) {
